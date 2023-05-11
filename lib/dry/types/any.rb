@@ -6,7 +6,7 @@ module Dry
       end
 
       def initialize(**options)
-        super(::Object, options)
+        super(::Object, **options)
       end
 
       # @return [String]

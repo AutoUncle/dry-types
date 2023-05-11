@@ -19,7 +19,7 @@ module Dry
       # @param [Type] type
       # @param [Hash] options
       # @option options [Array] :values
-      def initialize(type, options)
+      def initialize(type, **options)
         super
         @mapping = options.fetch(:mapping).freeze
         @values = @mapping.keys.freeze

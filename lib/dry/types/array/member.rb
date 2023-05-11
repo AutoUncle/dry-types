@@ -8,7 +8,7 @@ module Dry
         # @param [Class] primitive
         # @param [Hash] options
         # @option options [Type] :member
-        def initialize(primitive, options = {})
+        def initialize(primitive, **options)
           @member = options.fetch(:member)
           super
         end

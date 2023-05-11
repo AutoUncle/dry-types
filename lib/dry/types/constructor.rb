@@ -139,7 +139,7 @@ module Dry
           response = type.__send__(method, *args, &block)
 
           if composable?(response)
-            response.constructor_type.new(response, options)
+            response.constructor_type.new(response, **options)
           else
             response
           end

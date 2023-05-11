@@ -13,10 +13,10 @@ module Dry
     #   #     :Decimal, :Nil, :True, :False, :Bool, :Date, :Nominal, :DateTime, :Range,
     #   #     :Coercible, :Time]
     class Module < ::Module
-      def initialize(registry, *args)
+      def initialize(registry, *args, **kwargs)
         @registry = registry
-        check_parameters(*args)
-        constants = type_constants(*args)
+        check_parameters(*args, **kwargs)
+        constants = type_constants(*args, **kwargs)
         define_constants(constants)
         extend(BuilderMethods)
 
